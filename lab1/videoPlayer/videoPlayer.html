@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>my Video player</title>
+    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class ="videoControls" >
+    <video class="video">
+        <source  src="./video/frozen.mp4"
+        type="video/mp4"
+        >
+    </video>
+    <div class = "myControl">
+        <input id ="myProgress" type="range" min="0" max="110" value="0" step="1" >
+        <span id="currentTime">00:00</span> / <span id="durationTime">00:00</span>
+        <br>
+        <button class ="playButton" title="Play">Play</button>
+        <button class ="pauseButton" title="pause">stop</button>
+        <button id="startFromBrgin" title="start"> << </button>
+        <button id="back5Sec" title="start"> < </button>
+        <button id="add5Sec" title="start"> > </button>
+        <button id="goToEnd" title="start"> >>  </button>
+        <input id ="sound" type="range" min="0" max="1" value="0.30" step="0.01" >
+        <button id="muted" title="mute"> Mute  </button>
+        <br>
+        <input id ="speed" type="range" min="0.5" max="16" value="" step="1" >
+
+    </div>
+</div>
+<script src="hideControls.js"></script>
+
+</body>
+
+</html>

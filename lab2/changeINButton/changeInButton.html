@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change in button </title>
+    <style>
+    .animatedHover{
+        border: 1px solid blueviolet;
+        padding: 15px;
+        cursor: pointer;
+        background-color: pink;
+        border-radius: 5px;
+    }
+    .animatedHover:hover{
+        animation-name: hoverDiv;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-delay: 0.5s;
+    animation-iteration-count: infinite;}
+    @keyframes hoverDiv{
+        0%{
+            background-color: peachpuff;
+            box-shadow: 1px 1px 1px   orange;
+        }
+        25%{
+            background-color: purple ;
+            box-shadow: 2px 2px 2px  #38cd13 ;
+        }
+        50%{
+            background-color: brown;
+            box-shadow: 3px 3px 3px burlywood;
+        }
+        75%{
+            background-color: black;
+            box-shadow: 4px 4px 4px  black;
+        }
+        100%{
+            background-color: skyblue;
+            box-shadow: 4px 4px 4px silver;
+        }
+    }</style>
+</head>
+<body>
+    <section>
+        <div class="animatedHover" style="text-align: center; color: white; font: size 40px;;">hover to Blink</div>
+      </section>
+</body>
+</html>

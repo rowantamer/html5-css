@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text color range</title>
+</head>
+<body>
+    <div style="margin-top: 30px;">
+        <span id = "colorRed">Red</span>
+        <input id="redColor" type="range" min="0" max="100" value="50" step="5" onclick="colors()" style="margin-left: 30px;">
+    </div>
+    <div style="padding-top: 30px;">
+        <span id ="colorGreen">Green</span>
+    <input id="greenColor" type="range" min="0" max="100" value="30" step="5" onclick="colors()" style="margin-left: 17px;">
+    </div>
+    <div style="padding-top: 30px;">
+        <span id ="colorBlue">Blue</span>
+    <input id="blueColor" type="range" min="0" max="100" value="70" step="5" onclick="colors()" style="margin-left: 27px;">
+    </div>
+    <div id="poem" style="margin-top: 30px; font-size: 50px; color: black; font-weight: bold;">
+        Change the 3 color Ranges above and observe my color change
+    </div>
+    <script>
+
+        function colors() {
+    let red = document.getElementById("redColor").value;
+    let green = document.getElementById("greenColor").value;
+    let blue = document.getElementById("blueColor").value;
+    document.getElementById("poem").style.color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    
+}
+    </script>
+
+</body>
+</html>
