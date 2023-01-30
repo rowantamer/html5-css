@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web worker</title>
+    <style>
+         button{
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            background-color: palevioletred;
+            border: 2px solid palevioletred;
+            font-weight: 700;
+            width: 160px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="sum">calc sum </button>
+    <button id="color">change color</button>
+    <script>
+        var worker = new Worker("worker.js") 
+        var sum = document.getElementById("sum");
+        var bg = document.getElementById("color");
+        
+
+        sum.onclick = function () {
+
+            worker.postMessage("");
+        }
+        worker.onmessage = function (message) {
+            console.log(message);
+            alert(message.data);
+        }
+
+        bg.onclick = function () {
+            if (document.body.style.background !== "pink") {
+                document.body.style.background = "pink";
+            } else {
+                document.body.style.background = "purple";
+            }
+        }
+    </script>
+</body>
+
+</html>
